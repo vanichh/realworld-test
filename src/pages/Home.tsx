@@ -1,3 +1,9 @@
+import { Articles } from 'components/articles';
+
 export const Home = () => {
-  return <>qweqwe</>;
+  return (
+    <main className={'content'}>
+      <Articles />
+    </main>
+  );
 };

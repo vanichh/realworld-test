@@ -1,0 +1,65 @@
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 40px 40px;
+}
+.list .post {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 11px 0px 14px 0px #00000024;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.list .header {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  margin-bottom: 20px;
+}
+.list .icon {
+  width: 80px;
+  margin-bottom: 10px;
+}
+.list .title {
+  font-size: 20px;
+  font-weight: bold;
+  grid-row: 3 span;
+}
+.list .time {
+  margin: 5px 0;
+}
+
+.list .description {
+  padding: 10px 0;
+  margin: auto 0;
+  line-height: 1.5;
+}
+.footer {
+  display: flex;
+  align-items: center;
+}
+.footer .description {
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.listTeg {
+  display: flex;
+}
+.listTeg .teg {
+  padding: 2px 8px;
+  margin: 0 2px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+.listTeg .teg:hover {
+  cursor: pointer;
+}

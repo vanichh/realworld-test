@@ -1,0 +1,20 @@
+.tags {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.description {
+  margin-right: 10px;
+}
+
+.btn {
+  background: inherit;
+  margin: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.btn:hover {
+  cursor: pointer;
+}

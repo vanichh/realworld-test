@@ -1,0 +1,16 @@
+.list {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+.list .btn {
+  background: inherit;
+  margin: 0 3px;
+  padding: 4px 10px;
+  border: 1px solid #80808082;
+  border-radius: 3px;
+}
+.list .btn:hover {
+  cursor: pointer;
+}

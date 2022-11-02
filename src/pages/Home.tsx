@@ -1,4 +1,5 @@
 import { Articles } from 'components/articles';
+import { Pagination } from 'components/pagination';
 import { Tags } from 'components/tags';
 
 export const Home = () => {
@@ -6,6 +7,7 @@ export const Home = () => {
     <main className={'content'}>
       <Tags />
       <Articles />
+      <Pagination />
     </main>
   );
 };

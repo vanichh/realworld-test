@@ -8,9 +8,13 @@
   background: inherit;
   margin: 0 3px;
   padding: 4px 10px;
-  border: 1px solid #80808082;
+  border: none;
+  outline: 1px solid #80808082;
   border-radius: 3px;
 }
 .list .btn:hover {
   cursor: pointer;
+}
+.list .btn.active {
+  outline: 2px solid #808080e0;
 }

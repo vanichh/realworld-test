@@ -1,13 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { articlesApi } from './RTK/articles';
+import { articlesApi } from './RTK/articlesApi';
 import { tagsApi } from './RTK/tags';
-import paginationSlice from './slices/pagination';
+import filterSlice from './slices/filterSlices';
+import paginationSlice from './slices/paginationSlices';
 
 export const store = configureStore({
   reducer: {
     [articlesApi.reducerPath]: articlesApi.reducer,
     [tagsApi.reducerPath]: tagsApi.reducer,
     pagination: paginationSlice,
+    filterApi: filterSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()

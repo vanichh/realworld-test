@@ -5,7 +5,7 @@ export interface Author {
   following: boolean;
 }
 
-export interface Article {
+export interface IArticle {
   slug: string;
   title: string;
   description: string;
@@ -19,6 +19,6 @@ export interface Article {
 }
 
 export interface IListArticle {
-  articles: Article[];
+  articles: IArticle[];
   articlesCount: number;
 }

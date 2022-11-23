@@ -14,12 +14,19 @@ const initialState: FilterState = {
 
 export const filterSlice = createSlice({
   name: 'pagination',
-
   initialState,
-  reducers: {},
+  reducers: {
+    setCurrentPage: (state, { payload }: PayloadAction<number>) => {
+      state.offset = payload;
+    },
+  }
 });
-export const {} = filterSlice.actions;
+
+export const { setCurrentPage } = filterSlice.actions;
 
 export const getParams = () => useAppSelector((store) => store.filterApi);
+
+export const getCurrentPage = () => useAppSelector(store=>store.filterApi.offset)
+
 
 export default filterSlice.reducer;

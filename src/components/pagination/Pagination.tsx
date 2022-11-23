@@ -1,16 +1,15 @@
 import { useMemo } from 'react';
 import { useAppDispatch } from 'store/hooks';
-import {
-  getCountArticle,
-  setCurrentPage,
-  getCurrentPage,
-} from 'store/slices/paginationSlices';
+import { getCountArticle } from 'store/slices/paginationSlices';
+import { setCurrentPage, getCurrentPage } from 'store/slices/filterSlices';
+
+
 import styles from './Pagination.module.css';
 
 export const Pagination = () => {
   const count = getCountArticle();
-  const cuppentPage = getCurrentPage();
-
+  const cuppentPage = getCurrentPage() || 1;
+  console.log('cuppentPage', cuppentPage)
   const dispatch = useAppDispatch();
 
   const countPage = useMemo(() => {
@@ -29,9 +28,8 @@ export const Pagination = () => {
       {countPage.map((numberBtn) => (
         <button
           onClick={() => onTogglePage(numberBtn)}
-          className={`${styles.btn} ${
-            numberBtn === cuppentPage ? styles.active : ''
-          }`}
+          className={`${styles.btn} ${numberBtn === cuppentPage ? styles.active : ''
+            }`}
           key={numberBtn}
         >
           {numberBtn}

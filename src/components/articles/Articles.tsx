@@ -7,6 +7,8 @@ import { ListArticles } from '../listArticles/ListArticles';
 
 export const Articles: FC = () => {
   const params = getParams();
+
+  console.log(params)
   const { data, isLoading } = useGetArticleQuery(params);
 
   if (isLoading) {
